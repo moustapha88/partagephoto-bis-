@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { FormsModule } from '@angular/forms';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 
 
@@ -12,7 +12,6 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
   ],
   exports: [
     LandingPageComponent
