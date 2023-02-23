@@ -23,10 +23,11 @@ export class FaceSnapsService {
            map(facesnaps => [...facesnaps].sort((a,b) => a.id - b.id)),
            map(sortedFacesnaps => sortedFacesnaps[sortedFacesnaps.length - 1]),
            map(previousFacesnap => ({
+              id: previousFacesnap.id + 1,
               ...formValue,
               snaps: 0,
               createdDate: new Date(),
-              id: previousFacesnap.id + 1
+              
           })),
           switchMap(newFacesnap => this.http.post<FaceSnap>(
               'http://localhost:3000/facesnaps',
